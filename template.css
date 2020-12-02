@@ -1,0 +1,183 @@
+/* variable */
+
+:root {
+    --space--xxs: 5px;
+    --space--xs: 10px;
+    --space--sm: 15px;
+    --space-md: 20px;
+    --space--lg: 25px;
+    --space--xl: 30px;
+    --color-grey-1: #363636;
+    --color-grey-2: #4e4d4d;
+    --color-grey-3: #959595;
+    --color-grey-4: #b7b7b7;
+    --color-grey-5: #d3d5da;
+    --color-grey-6: #d3d5da;
+}
+
+.flexPosCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+}
+
+
+/* button */
+
+.defaultBtn {
+    min-width: 200px;
+    cursor: pointer;
+    padding: var(--space--lg) 0;
+    font-size: 1rem;
+}
+
+.customBtn,
+.customBtnNobg {
+    position: relative;
+}
+
+.customBtnNobg:hover {
+    color: var(--theme-color) !important;
+    border: 1px solid var(--theme-color) !important;
+}
+
+.customBtn:hover {
+    color: #fff !important;
+    border: 1px solid var(--theme-color) !important;
+    background-color: var(--theme-color) !important;
+}
+
+.customBtn:hover:after,
+.customBtnNobg:hover:after {
+    width: calc(80%);
+    left: 10%;
+}
+
+.customBtn:after,
+.customBtnNobg:after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    width: 0;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease-in-out all;
+}
+
+.customBtn:after {
+    border-top: 1px solid #fff !important;
+}
+
+.customBtnNobg:after {
+    border-top: 1px solid var(--theme-color) !important;
+}
+
+
+/* background image */
+
+.image {
+    background-image: url(이미지경로.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* position */
+
+.positionBox {
+    position: static;
+    position: relative;
+    position: absolute;
+    position: fixed;
+    /* 브라우저 내의 고정위치를 가짐 */
+    z-index: 5;
+}
+
+
+/* center center */
+
+.absPosCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* pseudo */
+
+.box:hover {
+    color: #000;
+}
+
+.box:focus {
+    color: #000;
+}
+
+
+/* text */
+
+.textBox {
+    text-align: center;
+    line-height: 20px;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px pink;
+    letter-spacing: 10px;
+    word-spacing: 10px;
+}
+
+
+/* media */
+
+@media only screen and (max-width: 767px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+
+/* fonts */
+
+
+/* 
+font-family: 'Unna', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;  */
+
+
+/********************** *******************/
+
+
+/* 
+transition: 0.2s ease-in-out all;
+
+-font-weight
+Thin         100     
+Extra Light     200
+Light           300
+Regular         400
+Medium          500
+Semi-Bold       600
+Bold            700
+Black           900 
+*/
